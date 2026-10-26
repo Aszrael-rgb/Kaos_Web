@@ -1,0 +1,116 @@
+:root {
+  --bg-main: #0a0e0b;
+  --bg-card: #121813;
+  --bg-card-hover: #1a231c;
+  --primary-green: #1db954;
+  --primary-green-glow: rgba(29, 185, 84, 0.25);
+  --accent-orange: #ff5500;
+  --accent-orange-glow: rgba(255, 85, 0, 0.35);
+  --text-main: #f3f4f6;
+  --text-muted: #8b9a8f;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color-glow: rgba(29, 185, 84, 0.4);
+
+  --text: var(--text-muted);
+  --text-h: var(--text-main);
+  --bg: var(--bg-main);
+  --border: var(--border-color);
+  --code-bg: var(--bg-card-hover);
+  --accent: var(--primary-green);
+  --accent-bg: var(--primary-green-glow);
+  --accent-border: var(--border-color-glow);
+  --social-bg: rgba(255, 255, 255, 0.04);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --sans: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --heading: var(--sans);
+
+  font-family: var(--sans);
+  color: var(--text-main);
+  background: var(--bg-main);
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+}
+
+html {
+  background: var(--bg-main);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+  scrollbar-color: var(--primary-green) var(--bg-card);
+  scrollbar-width: thin;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-card);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid var(--bg-card);
+  border-radius: 999px;
+  background: var(--primary-green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-orange);
+}
+
+.glass-panel {
+  border: 1px solid var(--border-color);
+  background: rgba(18, 24, 19, 0.72);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #1db954, #7ae8a0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, #ff5500, #ff9a5c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-effect-green {
+  box-shadow: 0 0 24px var(--primary-green-glow);
+}
+
+.glow-effect-orange {
+  box-shadow: 0 0 24px var(--accent-orange-glow);
+}
